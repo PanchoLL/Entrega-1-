@@ -28,6 +28,7 @@ Relación Maquina- Repuesto: La base permite ver en que maquina se uso cada repu
 
 Gestion de Mantenimiento: En general la base nos permite realizar un seguimiento eficiente del mantenimiento de los equipos. 
 
+
  
 
 Objetivo: 
