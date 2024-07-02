@@ -2,7 +2,7 @@
 
  
 
-Base de datos sistema para manejo de repuestos en empresa de maquinaria  
+Base de datos para manejo de repuestos en empresa de maquinaria.  
 
  
 
@@ -67,7 +67,7 @@ Atributos: ID de Repuesto (pk), Nombre, Descripción, Precio, Stock
 
 
 
-DetallePedido 
+- DetallePedido 
 
 Permite registrar los datos de cada pedido especifico como la cantidad y su precio. 
 
@@ -75,7 +75,7 @@ Atributos: ID de Detalle (pk), ID de Pedido (fk), ID de Repuesto (fk), Cantidad,
 
  
 
-Maquina  
+- Maquina  
 
 Permite almacenar información acerca de las máquinas de la empresa. 
 
@@ -83,21 +83,21 @@ Atributos: ID de Maquina (pk), Nombre, Modelo, Fabricante
 
 
 
-Repuesto Maquina 
+- Repuesto Maquina 
 
 Es el puente entre los repuestos y las maquinas que los utilizan. 
 
 Atributos: ID de Repuesto(fk), ID Maquina(fk); Cantidad necesaria  
 
  
-Mantenimiento 
+- Mantenimiento 
 
 Permite registrar las actividades de mantenimiento realizadas a las maquinas. 
 
 Atributos: ID de Mantenimiento (pk), Fecha de mantenimiento, Descripción, ID Maquina (fk) 
 
  
-DetalleMantenimiento 
+- DetalleMantenimiento 
 
 Permite registrar el detalle de cada mantenimiento y los repuestos utilizados. 
 
