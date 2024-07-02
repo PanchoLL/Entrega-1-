@@ -1,6 +1,6 @@
 -- Codigo RepuestosMaquinaria Version 2 :
 
--- Crear y usar base de datos (Cambiarle el nombre )
+-- Crear y usar base de datos 
 
 CREATE DATABASE IF NOT EXISTS RepuestosMaquinaria;
 USE RepuestosMaquinaria;
