@@ -6,7 +6,7 @@ Base de datos sistema para manejo de repuestos en empresa de maquinaria
 
  
 
-Problema: 
+## Problema: 
 
  
 Para el ejercicio tenemos una empresa que presta servicios con maquinaria, por lo tanto, tiene una flota de diferentes tipos de equipos para poder atender a sus diferentes clientes. 
@@ -17,7 +17,7 @@ Los repuestos deben controlarse de manera eficiente, ya que son bastante caros, 
 
  
 
-Descripción del Problema: 
+## Descripción del Problema: 
 
 
 Gestión de pedidos a proveedores:  Permite tener el control y registro de los pedidos realizados a los proveedores y el detalle de cada uno. 
@@ -31,17 +31,17 @@ Gestion de Mantenimiento: En general la base nos permite realizar un seguimiento
 
  
 
-Objetivo: 
+## Objetivo: 
 
 
 Diseñar e implementar una base de datos relacional que permita a la empresa llevar un control eficiente y detallado de los repuestos que compra a diferentes proveedores. Y que luego se instalan en diferentes máquinas para realizar su mantenimiento. Buscamos que la base sea simple de entender, fácil de manejar para sus usuarios, facilita el acceso a la información para poder mejorar el control y la toma de decisiones.  
 
  
 
-Descripción de la Base de Datos - Gestión Maquinaria: 
+## Descripción de la Base de Datos - Gestión Maquinaria: 
 
 
-Tablas: 
+# Tablas: 
 
 
 Proveedor 
@@ -104,6 +104,6 @@ Permite registrar el detalle de cada mantenimiento y los repuestos utilizados.
 Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Cantidad Usada  
 
 
-Diagrama de entidad Relacion:
+## Diagrama de entidad Relacion:
 
 ![alt text](<Diagrama Entidad-Relacion.jpg>)
