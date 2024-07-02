@@ -1,4 +1,4 @@
-Entrega 1 – Francisco Llambias – Comisión 57190 – 02/07/2024 
+# Entrega 1 – Francisco Llambias – Comisión 57190 – 02/07/2024 
 
  
 
@@ -41,10 +41,10 @@ Diseñar e implementar una base de datos relacional que permita a la empresa lle
 ## Descripción de la Base de Datos - Gestión Maquinaria: 
 
 
-# Tablas: 
+Tablas: 
 
 
-Proveedor 
+- Proveedor 
 
 Permite tener un registro de cada proveedor. 
 
@@ -52,14 +52,14 @@ Atributos: ID de Proveedor (pk), Nombre, Dirección, Teléfono, Email
 
  
 
-Pedido 
+- Pedido 
 
 Permite registrar los pedidos realizados a los diferentes proveedores  
 
 Atributos: ID de Pedido (pk), Fecha de Pedido, Fecha de recepción; ID de Proveedor (fk) 
 
 
-Repuesto 
+- Repuesto 
 
 Registra los repuestos que se tienen disponibles  
 
