@@ -38,7 +38,7 @@ Diseñar e implementar una base de datos relacional que permita a la empresa lle
 
  
 
-Descripción de la Base de Datos - Gestión Maquinaria 
+Descripción de la Base de Datos - Gestión Maquinaria: 
 
 
 Tablas: 
@@ -104,4 +104,6 @@ Permite registrar el detalle de cada mantenimiento y los repuestos utilizados.
 Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Cantidad Usada  
 
 
-![Diagrama E-R](Diagrama Entidad-Relacion.jpg)
+Diagrama de entidad Relacion:
+
+Diagrama Entidad-Relacion
