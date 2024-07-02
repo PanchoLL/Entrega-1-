@@ -104,4 +104,4 @@ Permite registrar el detalle de cada mantenimiento y los repuestos utilizados.
 Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Cantidad Usada  
 
 
-![Diagrama E-R](Diagrama E-R.pdf)
+![Diagrama E-R](Diagrama Entidad-Relacion.jpg)
