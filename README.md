@@ -6,7 +6,7 @@ Base de datos para manejo de repuestos en empresa de maquinaria.
 
  
 
-## Problema: 
+Problema: 
 
  
 Para el ejercicio tenemos una empresa que presta servicios con maquinaria, por lo tanto, tiene una flota de diferentes tipos de equipos para poder atender a sus diferentes clientes. 
