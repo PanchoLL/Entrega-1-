@@ -106,4 +106,4 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 
 ## Diagrama de entidad Relacion:
 
-
+![alt text](<Diagrama Entidad-Relacion>)
