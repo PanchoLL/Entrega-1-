@@ -115,10 +115,12 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 ## Documentacion de Vistas
 
 - Vista Mantenimiento ultimo mes: Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes. Indica a que maquina se le realizo el mantenimiento con ID_Maquina.
+  
 Columnas: ID_ Mantenimieno Fecha_Mantenimiento Descripcion Id_Maquina
 Ejemplo Consulta:
   
 - Vista Mantenimientos costosos: Esta lista muestra los mantenimientos mas caros que se han realizado.
+  
 Columnas: ID_ Mantenimieno Fecha_Mantenimiento Maquina Costo_Total
 Ejemplo Consulta:
 
@@ -134,6 +136,14 @@ Ejemplo Consulta:
 
 Retorno:
 Ejemplo de uso:
+
+```SELECT 
+    ID_Pedido,
+    Fecha_Pedido,
+    Fecha_Recepcion,
+    Fn_Fecha_Recepcion(Fecha_Pedido, Fecha_Recepcion) AS Dias_Entrega
+FROM 
+    Pedido; ```
 
 - Funcion 2
 Retorno:
