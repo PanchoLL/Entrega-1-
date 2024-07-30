@@ -143,7 +143,7 @@ Ejemplo de uso:
     Fecha_Recepcion,
     Fn_Fecha_Recepcion(Fecha_Pedido, Fecha_Recepcion) AS Dias_Entrega
 FROM 
-    Pedido; ```
+    Pedido;```
 
 - Funcion 2
 Retorno:
