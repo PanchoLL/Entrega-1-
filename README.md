@@ -117,24 +117,38 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 - Vista Mantenimiento ultimo mes: Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes. Indica a que maquina se le realizo el mantenimiento con ID_Maquina.
   
 Columnas: ID_ Mantenimieno Fecha_Mantenimiento Descripcion Id_Maquina
+
 Ejemplo Consulta:
+
+```SELECT * FROM Mantenientos_ultimo_mes;
+```
   
 - Vista Mantenimientos costosos: Esta lista muestra los mantenimientos mas caros que se han realizado.
   
 Columnas: ID_ Mantenimieno Fecha_Mantenimiento Maquina Costo_Total
+
 Ejemplo Consulta:
+
+```SELECT * FROM mantenimientos_Costosos;
+```
 
   
 - Vista Stock: Esta vista muestra el stock disponible para cada repuesto.
+- 
 Columnas: Id_ Repuesto Nombre Stock
+
 Ejemplo Consulta:
+
+```SELECT * FROM Stock_Repuestos;
+```
   
 
 ## Documentacion de Funciones
 
 - Funcion Dias de Pedido: Esta funcion entrega la diferencia en dias entre la Fecha de Recepcion y la fecha de Pedido. Con la finaalidad cuanto se estan demorando los pedidos realizados.
 
-Retorno:
+Retorno: Dias desde que solicito un pedido hasta que fue entregado 
+
 Ejemplo de uso:
 
 ```SELECT 
@@ -146,9 +160,21 @@ FROM
     Pedido;
 ```
 
-- Funcion 2
-Retorno:
+- Funcion Valor por repuesto: En esta funcion puedo revisar cuanbto dinero hay en cada tipo de repuesto.
+  
+Retorno: Valor total de cada tipo de repuesto
+
 Ejemplo de uso:
+```SELECT
+Id_Repuesto,
+Nombre,
+Precio,
+stock,
+Valor_Stock (Precio , Stock) AS Valor_Stock
+FROM Repuesto
+ORDER BY Valor_Stock DESC;
+```
+
 
 - Funcion3
 Retorno:
