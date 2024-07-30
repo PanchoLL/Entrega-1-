@@ -107,3 +107,54 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 ## Diagrama de entidad Relacion:
 
 ![alt text](<Diagrama Entidad-Relacion.jpg>)
+
+
+
+# Segunda Parte de la Entrega
+
+## Documentacion de Vistas
+
+- Vista Mantenimiento ultimo mes: Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes. Indica a que maquina se le realizo el mantenimiento con ID_Maquina.
+Columnas: ID_ Mantenimieno Fecha_Mantenimiento Descripcion Id_Maquina
+Ejemplo Consulta:
+  
+- Vista Mantenimientos costosos: Esta lista muestra los mantenimientos mas caros que se han realizado.
+Columnas: ID_ Mantenimieno Fecha_Mantenimiento Maquina Costo_Total
+Ejemplo Consulta:
+
+  
+- Vista Stock: Esta vista muestra el stock disponible para cada repuesto.
+Columnas: Id_ Repuesto Nombre Stock
+Ejemplo Consulta:
+  
+
+## Documentacion de Funciones
+
+- Funcion Dias de Pedido: Esta funcion entrega la diferencia en dias entre la Fecha de Recepcion y la fecha de Pedido. Con la finaalidad cuanto se estan demorando los pedidos realizados.
+
+Retorno:
+Ejemplo de uso:
+
+- Funcion 2
+Retorno:
+Ejemplo de uso:
+
+- Funcion3
+Retorno:
+Ejemplo de uso:
+## Documentacion de Stored Procedures 
+
+-St1 
+
+-St2
+
+-ST3
+
+## Documentacion de Triggers 
+
+
+-T1
+
+-T2
+
+-T3
