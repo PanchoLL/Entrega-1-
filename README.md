@@ -120,8 +120,7 @@ Columnas: ID_ Mantenimieno Fecha_Mantenimiento Descripcion Id_Maquina
 
 Ejemplo Consulta:
 
-```SELECT * FROM Mantenientos_ultimo_mes;
-```
+```SELECT * FROM Mantenientos_ultimo_mes;```
   
 - Vista Mantenimientos costosos: Esta lista muestra los mantenimientos mas caros que se han realizado.
   
@@ -129,8 +128,7 @@ Columnas: ID_ Mantenimieno Fecha_Mantenimiento Maquina Costo_Total
 
 Ejemplo Consulta:
 
-```SELECT * FROM mantenimientos_Costosos;
-```
+```SELECT * FROM mantenimientos_Costosos;```
 
   
 - Vista Stock: Esta vista muestra el stock disponible para cada repuesto.
@@ -139,8 +137,7 @@ Columnas: Id_ Repuesto Nombre Stock
 
 Ejemplo Consulta:
 
-```SELECT * FROM Stock_Repuestos;
-```
+```SELECT * FROM Stock_Repuestos;```
   
 
 ## Documentacion de Funciones
