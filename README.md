@@ -114,7 +114,7 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 
 ## Documentacion de Vistas
 
-###Vista Mantenimiento ultimo mes:
+### Vista Mantenimiento ultimo mes:
 
 Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes. Indica a que maquina se le realizo el mantenimiento con ID_Maquina.
   
@@ -124,7 +124,7 @@ Ejemplo Consulta:
 
 ```SELECT * FROM Mantenientos_ultimo_mes;```
   
-###Vista Mantenimientos costosos:
+### Vista Mantenimientos costosos:
 
  Esta lista muestra los mantenimientos mas caros que se han realizado.
   
@@ -135,7 +135,7 @@ Ejemplo Consulta:
 ```SELECT * FROM mantenimientos_Costosos;```
 
   
-###Vista Stock
+### Vista Stock
 
 Esta vista muestra e stock disponible para cada repuesto.
  
@@ -148,7 +148,7 @@ Ejemplo Consulta:
 
 ## Documentacion de Funciones
 
-###Funcion Dias de Pedido: 
+### Funcion Dias de Pedido: 
 
 Esta funcion entrega la diferencia en dias entre la Fecha de Recepcion y la fecha de Pedido. Con la finaalidad cuanto se estan demorando los pedidos realizados.
 
@@ -165,7 +165,7 @@ FROM
     Pedido;
 ```
 
-###Funcion Valor por repuesto:
+### Funcion Valor por repuesto:
 
 En esta funcion puedo revisar cuanbto dinero hay en cada tipo de repuesto.
   
@@ -183,22 +183,53 @@ ORDER BY Valor_Stock DESC;
 ```
 
 
-###Funcion3
+### Funcion3
 Retorno:
 Ejemplo de uso:
 
+
 ## Documentacion de Stored Procedures 
 
-###St1 
+### Procedimiento ValorTotal del Stock
 
-###St2
+Entrega el valor total del stck de todos los repuestos que hay en la empresa 
 
-###ST3
+Retorno: Valor del Stock Total
+
+Ejemplo de uso:
+```CALL SP_Valor_Total_Stock()```
+
+### St2
+
+Ejemplo de uso:
+```
+```
+
+
+### ST3
+
+Ejemplo de uso:
+```
+```
 
 ## Documentacion de Triggers 
 
-###T1
+### T1
 
-###T2
 
-###T3
+Ejemplo de uso:
+```
+```
+
+### T2
+
+
+Ejemplo de uso:
+```
+```
+
+### T3
+
+Ejemplo de uso:
+```
+```
