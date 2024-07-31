@@ -199,11 +199,12 @@ Retorno: Valor del Stock Total
 Ejemplo de uso:
 ```CALL SP_Valor_Total_Stock()```
 
-### St2
+### Procedimiento Mantenimientos por Maquina 
+
+Entrega los mantenimientos que se le han realizado a cada maquina y contiene informacion de cada uno de ellos.
 
 Ejemplo de uso:
-```
-```
+```CALL Mantenimientos_Por_Maquina(4);```
 
 
 ### ST3
@@ -214,19 +215,26 @@ Ejemplo de uso:
 
 ## Documentacion de Triggers 
 
-### T1
+### Trigger 1 Actualizar_Stock_X_DetalleMantenimiento
 
+Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento
 
-Ejemplo de uso:
-```
-```
+Detalle:
+Tabla afectada: Repuesto
+Accion: Update 
+Info Actualizada: Stock 
 
-### T2
+Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego el stock de filtros de aceite se reduce en una unidad
 
+### Trigger 2 Validar_Stock_Mantenimiento
 
-Ejemplo de uso:
-```
-```
+Descripcion: Este Trigger permite dar un aviso si no hay repuestos para hacer un mantenimiento.
+
+Detalle:
+Tabla afectada: Repuesto
+Accion: Set Message
+
+En este caso 
 
 ### T3
 
