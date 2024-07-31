@@ -156,7 +156,8 @@ Retorno: Dias desde que solicito un pedido hasta que fue entregado
 
 Ejemplo de uso:
 
-```SELECT 
+```
+SELECT 
     ID_Pedido,
     Fecha_Pedido,
     Fecha_Recepcion,
@@ -172,7 +173,8 @@ En esta funcion puedo revisar cuanbto dinero hay en cada tipo de repuesto.
 Retorno: Valor total de cada tipo de repuesto
 
 Ejemplo de uso:
-```SELECT
+```
+SELECT
 Id_Repuesto,
 Nombre,
 Precio,
@@ -207,11 +209,14 @@ Ejemplo de uso:
 ```CALL Mantenimientos_Por_Maquina(4);```
 
 
-### ST3
+### Procedimiento Repuestos con Poco Stock
+
+Este procedimiento permite revisar rapidamente que repuestos tienen stock bajo un numero determinado
+
+Retorno: Muestra tabla con todos los respuestos que estanm bajo un monto selecionado. Por ejemplo podemos ver todos los repuestos que tienen stock menor que 20
 
 Ejemplo de uso:
-```
-```
+```CALL Repuestos_Poco_Stock(20);```
 
 ## Documentacion de Triggers 
 
