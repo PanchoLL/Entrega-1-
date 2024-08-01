@@ -110,7 +110,7 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 
 
 
-# Segunda Parte de la Entrega
+# Segunda Parte de la Entrega 01/08/2024
 
 ## Documentacion de Vistas
 
@@ -126,7 +126,7 @@ Ejemplo Consulta:
   
 ### Vista Mantenimientos costosos:
 
- Esta lista muestra los mantenimientos mas caros que se han realizado.
+ Esta lista muestra los mantenimientos mas caros que se han realizado en la empresa.
   
 Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Maquina; Costo_Total
 
@@ -137,7 +137,7 @@ Ejemplo Consulta:
   
 ### Vista Stock
 
-Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto y nombre 
+Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto y nombre. 
  
 Columnas: Id_ Repuesto; Nombre; Stock
 
@@ -150,7 +150,7 @@ Ejemplo Consulta:
 
 ### Funcion Dias de Pedido: 
 
-Esta funcion entrega la diferencia, en dias, entre la Fecha de Recepcion y la fecha de Pedido. Con la finalidad se poder tener control sobre cuanto se estan demorando en llegar los pedidos realizados.
+Esta funcion entrega la diferencia, en dias, entre la Fecha de Recepcion y la Fecha de Pedido. Con la finalidad se poder tener control sobre cuanto se estan demorando en llegar los pedidos realizados.
 
 Retorno: Dias desde que solicito un pedido hasta que fue entregado 
 
@@ -168,9 +168,9 @@ FROM
 
 ### Funcion Valor por repuesto:
 
-En esta funcion puedo revisar cuanto dinero hay en cada tipo de repuesto. Indica el nombre del repuesto el precio al cual se sompro, la cantidad de stock y el Valor del stock en bodega.
+En esta funcion puedo revisar cuanto dinero hay en cada tipo de repuesto. Indica el nombre del repuesto el precio al cual se compro, la cantidad de stock y el Valor del stock en bodega.
   
-Retorno: Valor total de cada tipo de repuesto
+Retorno: Valor total de cada tipo de repuesto.
 
 Ejemplo de uso:
 ```
@@ -187,7 +187,7 @@ ORDER BY Valor_Stock DESC;
 
 ### Funcion Tota Repuestos por Mantenimiento:
 
-Esta funcion entrega la cantidad total de repuestos que han sido usados, en todos los mantenimientos, que se han registrado en la tabla Mantenimientos
+Esta funcion entrega la cantidad total de repuestos que han sido usados, en todos los mantenimientos, que se han registrado en la tabla Mantenimientos.
 
 Retorno: Total de repuestos que han sido usados en los mantenimientos que estan registrados en este modelo, es decir cuantos repuestos hemos usado historicamnete.
 
@@ -200,9 +200,9 @@ Ejemplo de uso:
 
 ### Procedimiento Valor Total del Stock
 
-Entrega el valor total del stck de todos los repuestos que hay en la empresa. Este procedimiento permite conocer rapidamente el valor de los inventarios.
+Entrega el valor total del stock de todos los repuestos que hay en la empresa. Este procedimiento permite conocer rapidamente el valor de los inventarios.
 
-Retorno: Valor del Stock Total
+Retorno: Valor del Stock Total.
 
 Ejemplo de uso:
 ```CALL SP_Valor_Total_Stock()```
