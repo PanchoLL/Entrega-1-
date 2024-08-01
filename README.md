@@ -228,7 +228,7 @@ Ejemplo de uso:
 
 ## Documentacion de Triggers 
 
-### Trigger 1 Actualizar_Stock_X_DetalleMantenimiento
+### Trigger Actualizar_Stock_X_DetalleMantenimiento
 
 Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento.
 
@@ -239,7 +239,7 @@ Info Actualizada: Stock
 
 Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego el stock de filtros de aceite se reduce en una unidad.
 
-### Trigger 2 Validar_Stock_Mantenimiento
+### Trigger Validar_Stock_Mantenimiento
 
 Descripcion: Este Trigger permite dar un aviso si no hay repuestos para hacer un mantenimiento.
 
@@ -249,8 +249,12 @@ Accion: Set Message
 
 En este caso se genera el mensaje: 'No hay repuesto para realizar este mantenimiento. Favor geenerar orden de compra' en caso que la cantidad a usar sea menor que el stock disponible.
 
-### T3
+### Trigger Verificadr_Fechas
 
-Ejemplo de uso:
-```
-```
+Envia un mensaje en caso de que la Fecha de recepcion sea anterior a la fecha del pedido. Esto busca evitar posibles errores en la insersion de las fechas.
+
+Detalle:
+Tabla afectada: Pedido
+Accion: Set Message
+
+En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido'
