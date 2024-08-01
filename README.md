@@ -118,7 +118,7 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 
 Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes. Indica a que maquina se le realizo el mantenimiento con ID_Maquina.
   
-Columnas: ID_ Mantenimieno Fecha_Mantenimiento Descripcion Id_Maquina
+Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Descripcion; Id_Maquina
 
 Ejemplo Consulta:
 
@@ -128,7 +128,7 @@ Ejemplo Consulta:
 
  Esta lista muestra los mantenimientos mas caros que se han realizado.
   
-Columnas: ID_ Mantenimieno Fecha_Mantenimiento Maquina Costo_Total
+Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Maquina; Costo_Total
 
 Ejemplo Consulta:
 
@@ -137,9 +137,9 @@ Ejemplo Consulta:
   
 ### Vista Stock
 
-Esta vista muestra e stock disponible para cada repuesto.
+Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto y nombre 
  
-Columnas: Id_ Repuesto Nombre Stock
+Columnas: Id_ Repuesto; Nombre; Stock
 
 Ejemplo Consulta:
 
@@ -150,7 +150,7 @@ Ejemplo Consulta:
 
 ### Funcion Dias de Pedido: 
 
-Esta funcion entrega la diferencia en dias entre la Fecha de Recepcion y la fecha de Pedido. Con la finaalidad cuanto se estan demorando los pedidos realizados.
+Esta funcion entrega la diferencia, en dias, entre la Fecha de Recepcion y la fecha de Pedido. Con la finalidad se poder tener control sobre cuanto se estan demorando en llegar los pedidos realizados.
 
 Retorno: Dias desde que solicito un pedido hasta que fue entregado 
 
@@ -168,7 +168,7 @@ FROM
 
 ### Funcion Valor por repuesto:
 
-En esta funcion puedo revisar cuanbto dinero hay en cada tipo de repuesto.
+En esta funcion puedo revisar cuanto dinero hay en cada tipo de repuesto. Indica el nombre del repuesto el precio al cual se sompro, la cantidad de stock y el Valor del stock en bodega.
   
 Retorno: Valor total de cada tipo de repuesto
 
@@ -187,9 +187,9 @@ ORDER BY Valor_Stock DESC;
 
 ### Funcion Tota Repuestos por Mantenimiento:
 
-Esta funcion entrega la cantidad total de repuestos que han sido usados en todos los mantenimientos que se han registrado en la tabla 
+Esta funcion entrega la cantidad total de repuestos que han sido usados, en todos los mantenimientos, que se han registrado en la tabla Mantenimientos
 
-Retorno: Total de repuestos que han sido usados en los mantenimientos que estan registrados en este modelo 
+Retorno: Total de repuestos que han sido usados en los mantenimientos que estan registrados en este modelo, es decir cuantos repuestos hemos usado historicamnete.
 
 Ejemplo de uso:
 
@@ -198,9 +198,9 @@ Ejemplo de uso:
 
 ## Documentacion de Stored Procedures 
 
-### Procedimiento ValorTotal del Stock
+### Procedimiento Valor Total del Stock
 
-Entrega el valor total del stck de todos los repuestos que hay en la empresa 
+Entrega el valor total del stck de todos los repuestos que hay en la empresa. Este procedimiento permite conocer rapidamente el valor de los inventarios.
 
 Retorno: Valor del Stock Total
 
@@ -211,6 +211,8 @@ Ejemplo de uso:
 
 Entrega los mantenimientos que se le han realizado a cada maquina y contiene informacion de cada uno de ellos.
 
+Retorno: Entrega informacion varia acerca de los mantenimientos que se le ahan realizado a una maquina en particular.
+
 Ejemplo de uso:
 ```CALL Mantenimientos_Por_Maquina(4);```
 
@@ -219,23 +221,23 @@ Ejemplo de uso:
 
 Este procedimiento permite revisar rapidamente que repuestos tienen stock bajo un numero determinado
 
-Retorno: Muestra tabla con todos los respuestos que estanm bajo un monto selecionado. Por ejemplo podemos ver todos los repuestos que tienen stock menor que 20
+Retorno: Muestra tabla con todos los respuestos que estan bajo un monto selecionado. Por ejemplo, podemos ver todos los repuestos que tienen stock menor que 30.
 
 Ejemplo de uso:
-```CALL Repuestos_Poco_Stock(20);```
+```CALL Repuestos_Poco_Stock(30);```
 
 ## Documentacion de Triggers 
 
 ### Trigger 1 Actualizar_Stock_X_DetalleMantenimiento
 
-Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento
+Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento.
 
 Detalle:
 Tabla afectada: Repuesto
 Accion: Update 
 Info Actualizada: Stock 
 
-Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego el stock de filtros de aceite se reduce en una unidad
+Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego el stock de filtros de aceite se reduce en una unidad.
 
 ### Trigger 2 Validar_Stock_Mantenimiento
 
@@ -245,7 +247,7 @@ Detalle:
 Tabla afectada: Repuesto
 Accion: Set Message
 
-En este caso 
+En este caso se genera el mensaje: 'No hay repuesto para realizar este mantenimiento. Favor geenerar orden de compra' en caso que la cantidad a usar sea menor que el stock disponible.
 
 ### T3
 
