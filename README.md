@@ -185,9 +185,15 @@ ORDER BY Valor_Stock DESC;
 ```
 
 
-### Funcion3
-Retorno:
+### Funcion Tota Repuestos por Mantenimiento:
+
+Esta funcion entrega la cantidad total de repuestos que han sido usados en todos los mantenimientos que se han registrado en la tabla 
+
+Retorno: Total de repuestos que han sido usados en los mantenimientos que estan registrados en este modelo 
+
 Ejemplo de uso:
+
+```SELECT Total_Repuestos() AS Repuestos_Usados_en_Mantenimientos;```
 
 
 ## Documentacion de Stored Procedures 
