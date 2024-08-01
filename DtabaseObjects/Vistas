@@ -1,5 +1,7 @@
 -- VISTAS --
 
+USE Pentrega2
+
 -- Vista Mantenimientos ultimo mes:Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes --
 
 CREATE VIEW Mantenientos_ultimo_mes AS
