@@ -1,0 +1,41 @@
+-- VISTAS --
+
+-- Vista Mantenimientos ultimo mes:Esta vista permite ver un listado de todos los mantenimientos que se han realizado el ultimo mes --
+
+CREATE VIEW Mantenientos_ultimo_mes AS
+SELECT*FROM Mantenimiento
+WHERE Fecha_Mantenimiento BETWEEN "2024-05-01" AND "2024-05-31";
+
+SELECT * FROM Mantenientos_ultimo_mes;
+
+-- Vista Manteniento mas caros: Esta lista muestra los mantenimientos mas caros que se han realizado.--
+
+CREATE VIEW mantenimientos_Costosos AS
+SELECT 
+    Mantenimiento.ID_Mantenimiento,
+    Mantenimiento.Fecha_Mantenimiento,
+    Maquina.Nombre AS Maquina,
+    SUM(DetalleMantenimiento.Cantidad_Usada * Repuesto.Precio) AS Costo_Total
+FROM 
+    DetalleMantenimiento
+JOIN 
+    Repuesto ON DetalleMantenimiento.ID_Repuesto = Repuesto.ID_Repuesto
+JOIN 
+    Mantenimiento ON DetalleMantenimiento.ID_Mantenimiento = Mantenimiento.ID_Mantenimiento
+JOIN 
+    Maquina ON Mantenimiento.ID_Maquina = Maquina.ID_Maquina
+GROUP BY 
+    Mantenimiento.ID_Mantenimiento, Mantenimiento.Fecha_Mantenimiento, Maquina.Nombre
+ORDER BY 
+    Costo_Total DESC;
+
+SELECT * FROM mantenimientos_Costosos;
+
+-- Vista 3: Visualizacion del stck de repuetos disponibles --
+
+DROP VIEW IF EXISTS Stock_Repuestos
+CREATE VIEW  Stock_Repuestos AS
+SELECT Id_Repuesto, Nombre, Stock 
+FROM Repuesto;
+
+SELECT * FROM Stock_Repuestos;
