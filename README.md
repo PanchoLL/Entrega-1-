@@ -135,7 +135,7 @@ Ejemplo Consulta:
 ```SELECT * FROM mantenimientos_Costosos;```
 
   
-### Vista Stock
+### Vista Stock:
 
 Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto y nombre. 
  
@@ -232,7 +232,8 @@ Ejemplo de uso:
 
 Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento.
 
-Detalle:
+-Detalle:
+
 Tabla afectada: Repuesto
 Accion: Update 
 Info Actualizada: Stock 
@@ -243,7 +244,8 @@ Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego 
 
 Descripcion: Este Trigger permite dar un aviso si no hay repuestos para hacer un mantenimiento.
 
-Detalle:
+-Detalle:
+
 Tabla afectada: Repuesto
 Accion: Set Message
 
@@ -253,8 +255,9 @@ En este caso se genera el mensaje: 'No hay repuesto para realizar este mantenimi
 
 Envia un mensaje en caso de que la Fecha de recepcion sea anterior a la fecha del pedido. Esto busca evitar posibles errores en la insersion de las fechas.
 
-Detalle:
+-Detalle:
+
 Tabla afectada: Pedido
 Accion: Set Message
 
-En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido'
+En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido' en caso que las fechas sean mal ingresadas.
