@@ -235,7 +235,9 @@ Descripcion: Actualiza el stock de un repuesto cuando se inserta un nuevo detall
 - Detalle:
   
 -Tabla afectada: Repuesto
+
 -Accion: Update 
+
 -Info Actualizada: Stock 
 
 Ejemplo: Se realiza un mantenimiento en donde se usa un filtro de aceite, luego el stock de filtros de aceite se reduce en una unidad.
@@ -247,6 +249,7 @@ Descripcion: Este Trigger permite dar un aviso si no hay repuestos para hacer un
 - Detalle:
   
 -Tabla afectada: Repuesto
+
 -Accion: Set Message
 
 En este caso se genera el mensaje: 'No hay repuesto para realizar este mantenimiento. Favor geenerar orden de compra' en caso que la cantidad a usar sea menor que el stock disponible.
@@ -258,6 +261,7 @@ Envia un mensaje en caso de que la Fecha de recepcion sea anterior a la fecha de
 - Detalle:
   
 -Tabla afectada: Pedido
+
 -Accion: Set Message
 
 En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido' en caso que las fechas sean mal ingresadas.
