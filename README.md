@@ -152,6 +152,8 @@ Ejemplo Consulta:
 
 Esta funcion entrega la diferencia, en dias, entre la Fecha de Recepcion y la Fecha de Pedido. Con la finalidad se poder tener control sobre cuanto se estan demorando en llegar los pedidos realizados.
 
+De esta funcion podemos obtener un KPI relevante el cual nos indica que pedidos son mas confiebles 
+
 Retorno: Dias desde que solicito un pedido hasta que fue entregado 
 
 Ejemplo de uso:
@@ -271,3 +273,9 @@ En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterio
 ## Back Up Schemas & Data 
 
 Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
+
+
+## Puntos a Mejorar del Modelo 
+
+
+
