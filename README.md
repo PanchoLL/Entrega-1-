@@ -1,4 +1,4 @@
-# Entrega 1 – Francisco Llambias – Comisión 57190 – 02/07/2024 
+# Entrega Final – Francisco Llambias – Comisión 57190 – 02/07/2024 
 
  
 
@@ -265,3 +265,9 @@ Envia un mensaje en caso de que la Fecha de recepcion sea anterior a la fecha de
 -Accion: Set Message
 
 En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido' en caso que las fechas sean mal ingresadas.
+
+
+
+## Back Up Schemas & Data 
+
+Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
