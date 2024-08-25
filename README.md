@@ -274,6 +274,8 @@ En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterio
 
 Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
 
+## Pasos para Levantar el Modelo
+
 
 ## Puntos a Mejorar del Modelo 
 
