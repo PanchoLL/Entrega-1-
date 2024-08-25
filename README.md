@@ -1,4 +1,4 @@
-# Entrega Final – Francisco Llambias – Comisión 57190 – 02/07/2024 
+# Entrega Final – Francisco Llambias – Comisión 57190 – 30/08/2024 
 
  
 
@@ -110,7 +110,7 @@ Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Canti
 
 
 
-# Segunda Parte de la Entrega 01/08/2024
+# Objetos del Modelo
 
 ## Documentacion de Vistas
 
