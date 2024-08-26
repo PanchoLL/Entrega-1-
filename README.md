@@ -135,16 +135,46 @@ Ejemplo Consulta:
 ```SELECT * FROM mantenimientos_Costosos;```
 
   
-### Vista Stock:
+### Stock_Repuestos:
 
-Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto y nombre. 
+Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto, nombre y Stock. 
+
+Stock_Repuestos resulta ser un KPI muy relevante 
  
 Columnas: Id_ Repuesto; Nombre; Stock
 
 Ejemplo Consulta:
 
-```SELECT * FROM Stock_Repuestos;```
-  
+```SELECT * FROM Stock_Repuestos
+   ORDER BY stock DESC;```
+
+
+###  Proveedores_Mayor_Volumen
+
+Esta vista permite ver los provedores a los cuales les compramos mas repuestos.
+
+La intencion de esta vista es que la administracion pueda visualizar los provedores mas relevantes para la empresa y puredan saber rapidamente cuales son los mas estrategicos para la empresa. Al correr la vista se puede ver que los provedortes a los que se les han comprado mas repuestos son: Komatsu, Liebherr y Bobcat.
+
+```
+CREATE VIEW Proveedores_Mayor_Volumen AS
+SELECT 
+    Proveedor.ID_Proveedor, 
+    Proveedor.Nombre, 
+    SUM(DetallePedido.Cantidad) AS Total_Repuestos
+FROM DetallePedido
+INNER JOIN Pedido ON DetallePedido.ID_Pedido = Pedido.ID_Pedido
+INNER JOIN Proveedor ON Pedido.ID_Proveedor = Proveedor.ID_Proveedor
+GROUP BY Proveedor.ID_Proveedor, Proveedor.Nombre
+ORDER BY Total_Repuestos DESC;
+```
+
+Ejemplo de Consulta:
+
+
+```
+SELECT * FROM Proveedores_Mayor_Volumen;
+```
+
 
 ## Documentacion de Funciones
 
