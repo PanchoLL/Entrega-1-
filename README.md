@@ -163,6 +163,16 @@ SELECT * FROM Proveedores_Mayor_Volumen;
 ```
 
 
+### Vista Costo_de_Mantenimiento_x_Maquina
+
+Permite ver las maquinas en las cuales mas se ha gastado por mantenimiento
+
+Esta vista es relevante porque le permite visualizar a los encargados de maquinaria cuales son las maquinas en las que se ha gastado mas, luego con un poco mas de investigacion se pueden tomar deciciones como vpor ejemplo decidir que ya es tiempo de venderla o evita los equipos de una determinada marca 
+
+```
+SELECT * FROM Costo_de_Mantenimiento_x_Maquina;
+```
+
 ## Documentacion de Funciones
 
 ### Funcion Dias de Pedido: 
