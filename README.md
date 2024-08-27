@@ -38,7 +38,7 @@ Diseñar e implementar una base de datos relacional que permita a la empresa lle
 ## Descripción de la Base de Datos - Gestión Maquinaria: 
 
 
-###Tablas: 
+### Tablas: 
 
 
 - Proveedor:
