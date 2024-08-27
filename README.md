@@ -6,102 +6,99 @@ Base de datos para manejo de repuestos en empresa de maquinaria.
 
  
 
-## Problema: 
+## Introduccion & Problematica: 
 
  
-Para el ejercicio tenemos una empresa que presta servicios con maquinaria, por lo tanto, tiene una flota de diferentes tipos de equipos para poder atender a sus diferentes clientes. 
+Tenemos una empresa que presta servicios con maquinaria, por lo tanto, tiene una flota de diferentes equipos para poder atender a variados clientes. 
 
-Necesitamos generar una base de datos que pueda manejar eficientemente los repuestos que utiliza esta empresa, desde las compras a los proveedores hasta tener el conocimiento de en cual equipo se instalan los repuestos. 
+Actualmente algunos repuestos llegan tarde a las bodegas tambien presentan un alto nivel de mermas y no se tiene claro en que equipo terminan instalados. Por otro lado, no todos los equipos tienen sus mantenimientos al dia. Todo esto genera desorden y perdidas de tiempo, lo que finalmente termina afectando el servicio que se le presta al cliente. 
 
-Los repuestos deben controlarse de manera eficiente, ya que son bastante caros, por lo que las pérdidas y mermas resultan muy costosas para la empresa. 
+Necesitamos generar una base de datos que pueda manejar eficientemente los repuestos que utiliza esta empresa, partiendo por las compras a los proveedores, entendierndo el stock disponible, hasta tener el conocimiento de en cual equipo se instalan los repuestos para que las maquinas funcionen de manera optima.
 
- 
-
-## Descripción del Problema: 
+ ## Objetivo: 
 
 
-Gestión de pedidos a proveedores:  Permite tener el control y registro de los pedidos realizados a los proveedores y el detalle de cada uno. 
-
-Gestión de Repuestos: Esta base permite conocer el stock de repuestos en algún momento determinado del tiempo. 
-
-Relación Maquina- Repuesto: La base permite ver en que maquina se uso cada repuesto comprado.  
-
-Gestion de Mantenimiento: En general la base nos permite realizar un seguimiento eficiente del mantenimiento de los equipos. 
+Diseñar e implementar una base de datos relacional que permita a la empresa llevar un control eficiente y detallado de los repuestos que compra a diferentes proveedores. Los cuales luego se instalan en diferentes máquinas para realizar su mantenimiento. Buscamos que la base sea simple de entender, fácil de manejar para sus usuarios, que facilite el acceso a la información, que mejore el control y que finalmente pueda mejoara la toma de decisiones y la eficiencia operacional de la empresa.
 
 
- 
-
-## Objetivo: 
+## Modelo de Negocios: 
 
 
-Diseñar e implementar una base de datos relacional que permita a la empresa llevar un control eficiente y detallado de los repuestos que compra a diferentes proveedores. Y que luego se instalan en diferentes máquinas para realizar su mantenimiento. Buscamos que la base sea simple de entender, fácil de manejar para sus usuarios, facilita el acceso a la información para poder mejorar el control y la toma de decisiones.  
+**Gestión de pedidos a proveedores:**  Permite tener el control y registro de los pedidos realizados a los proveedores y el detalle de cada uno.Esto permite tener el conocimiento de cuales son los proveedores mas relevante y mas confiables para nuestra empresa.
+
+**Gestión de Repuestos:** Esta base permite conocer el stock de repuestos en algún momento determinado del tiempo. Para este negocio es muy relevante tener respuesdtos siempre disponibles ya que su ausencia afecta la disponibilidad de las maquinas en el trabajo. 
+
+**Relación Maquina- Repuesto** La base permite ver en que maquina se uso cada repuesto comprado. Esto permitira conocer a donde han terminado los repuestos que salen de bodega.
+
+**Gestion de Mantenimiento:** En general la base nos permite realizar un seguimiento eficiente del mantenimiento de los equipos. Es relevante conocer el historiar de mantenimientos y llevar los mantenimientos al dia para asi minimizar la probailidad de las fallas.
+
 
  
 
 ## Descripción de la Base de Datos - Gestión Maquinaria: 
 
 
-Tablas: 
+###Tablas: 
 
 
-- Proveedor 
+- Proveedor:
 
 Permite tener un registro de cada proveedor. 
 
-Atributos: ID de Proveedor (pk), Nombre, Dirección, Teléfono, Email 
+Atributos: ID de Proveedor (PK), Nombre, Dirección, Teléfono, Email 
 
  
 
-- Pedido 
+- Pedido:
 
-Permite registrar los pedidos realizados a los diferentes proveedores  
+Permite registrar los pedidos realizados a los diferentes proveedores.  
 
-Atributos: ID de Pedido (pk), Fecha de Pedido, Fecha de recepción; ID de Proveedor (fk) 
-
-
-- Repuesto 
-
-Registra los repuestos que se tienen disponibles  
-
-Atributos: ID de Repuesto (pk), Nombre, Descripción, Precio, Stock 
+Atributos: ID de Pedido (PK), Fecha de Pedido, Fecha de recepción; ID de Proveedor (FK) 
 
 
+- Repuesto: 
 
-- DetallePedido 
+Registra todos los repuestos que se tienen disponibles.  
+
+Atributos: ID de Repuesto (PK), Nombre, Descripción, Precio, Stock 
+
+
+
+- DetallePedido:
 
 Permite registrar los datos de cada pedido especifico como la cantidad y su precio. 
 
-Atributos: ID de Detalle (pk), ID de Pedido (fk), ID de Repuesto (fk), Cantidad, Precio Unitario 
+Atributos: ID de Detalle (PK), ID de Pedido (FK), ID de Repuesto (FK), Cantidad, Precio Unitario 
 
  
 
-- Maquina  
+- Maquina: 
 
 Permite almacenar información acerca de las máquinas de la empresa. 
 
-Atributos: ID de Maquina (pk), Nombre, Modelo, Fabricante 
+Atributos: ID de Maquina (PK), Nombre, Modelo, Fabricante 
 
 
 
-- Repuesto Maquina 
+- Repuesto Maquina:
 
 Es el puente entre los repuestos y las maquinas que los utilizan. 
 
-Atributos: ID de Repuesto(fk), ID Maquina(fk); Cantidad necesaria  
+Atributos: ID de Repuesto(FK), ID Maquina(FK); Cantidad necesaria  
 
  
-- Mantenimiento 
+- Mantenimiento: 
 
 Permite registrar las actividades de mantenimiento realizadas a las maquinas. 
 
-Atributos: ID de Mantenimiento (pk), Fecha de mantenimiento, Descripción, ID Maquina (fk) 
+Atributos: ID de Mantenimiento (PK), Fecha de mantenimiento, Descripción, ID Maquina (FK) 
 
  
-- DetalleMantenimiento 
+- DetalleMantenimiento: 
 
-Permite registrar el detalle de cada mantenimiento y los repuestos utilizados. 
+Permite registrar el detalle de cada mantenimiento y la cantidad usada en cada mantenimiento. 
 
-Atributos: ID de Detalle (pk), ID de Mantenimiento (fk), ID Repuesto (fk), Cantidad Usada  
+Atributos: ID de Detalle (PK), ID de Mantenimiento (FK), ID Repuesto (FK), Cantidad Usada  
 
 
 ## Diagrama de entidad Relacion:
@@ -303,6 +300,7 @@ Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi
 
 ## Pasos para Levantar el Modelo
 
+En primer lugar se debe correr la estructura de la base disponible en **Schemas**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo lo0s diferentes objetos de la base de datos 
 
 ## Puntos a Mejorar del Modelo 
 
