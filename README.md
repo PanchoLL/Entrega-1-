@@ -101,15 +101,15 @@ Permite registrar el detalle de cada mantenimiento y la cantidad usada en cada m
 Atributos: ID de Detalle (PK), ID de Mantenimiento (FK), ID Repuesto (FK), Cantidad Usada  
 
 
-## Diagrama de entidad Relacion:
+## Diagrama de Entidad - Relacion:
 
 ![alt text](<Diagrama Entidad-Relacion.jpg>)
 
 
 
-# Objetos del Modelo
+# Objetos del Modelo:
 
-## Documentacion de Vistas
+## Documentacion de Vistas:
 
 ### Vista Mantenimiento ultimo mes:
 
