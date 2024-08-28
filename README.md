@@ -298,11 +298,11 @@ En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterio
 
 Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
 
-## Pasos para Levantar el Modelo
+## Pasos para Levantar el Modelo:
 
-En primer lugar se debe correr la estructura de la base disponible en **Schemas**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo lo0s diferentes objetos de la base de datos 
+En primer lugar se debe correr la estructura de la base disponible en **Database_Structure**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo lo0s diferentes objetos de la base de datos 
 
-## Puntos a Mejorar del Modelo 
+## Puntos a Mejorar del Modelo:
 
 
 
