@@ -235,7 +235,9 @@ Retorno: Total de repuestos que han sido usados en los mantenimientos que estan 
 
 Ejemplo de uso:
 
-```SELECT Total_Repuestos() AS Repuestos_Usados_en_Mantenimientos;```
+```
+SELECT Total_Repuestos() AS Repuestos_Usados_en_Mantenimientos;
+```
 
 
 ## Documentacion de Stored Procedures 
@@ -247,7 +249,9 @@ Entrega el valor total del stock de todos los repuestos que hay en la empresa. E
 Retorno: Valor del Stock Total.
 
 Ejemplo de uso:
-```CALL SP_Valor_Total_Stock()```
+```
+CALL SP_Valor_Total_Stock()
+```
 
 ### Procedimiento Mantenimientos por Maquina 
 
@@ -256,7 +260,9 @@ Entrega los mantenimientos que se le han realizado a cada maquina y contiene inf
 Retorno: Entrega informacion varia acerca de los mantenimientos que se le ahan realizado a una maquina en particular.
 
 Ejemplo de uso:
-```CALL Mantenimientos_Por_Maquina(4);```
+```
+CALL Mantenimientos_Por_Maquina(4);
+```
 
 
 ### Procedimiento Repuestos con Poco Stock
@@ -266,7 +272,9 @@ Este procedimiento permite revisar rapidamente que repuestos tienen stock bajo u
 Retorno: Muestra tabla con todos los respuestos que estan bajo un monto selecionado. Por ejemplo, podemos ver todos los repuestos que tienen stock menor que 30.
 
 Ejemplo de uso:
-```CALL Repuestos_Poco_Stock(30);```
+```
+CALL Repuestos_Poco_Stock(30);
+```
 
 ## Documentacion de Triggers 
 
