@@ -11,20 +11,20 @@ Base de datos para manejo de repuestos en empresa de maquinaria.
  
 Tenemos una empresa que presta servicios con maquinaria, por lo tanto, tiene una flota de diferentes equipos para poder atender a variados clientes. 
 
-Actualmente algunos repuestos llegan tarde a las bodegas tambien presentan un alto nivel de mermas y no se tiene claro en que equipo terminan instalados. Por otro lado, no todos los equipos tienen sus mantenimientos al dia. Todo esto genera desorden y perdidas de tiempo, lo que finalmente termina afectando el servicio que se le presta al cliente. 
+Actualmente algunos repuestos llegan tarde a las bodegas, tambien presentan un alto nivel de mermas y no se tiene claro en que equipo terminan instalados. Por otro lado, no todos los equipos tienen sus mantenimientos al dia. Todo esto genera desorden y perdidas de tiempo, lo que finalmente termina afectando el servicio que se le presta al cliente. 
 
 Necesitamos generar una base de datos que pueda manejar eficientemente los repuestos que utiliza esta empresa, partiendo por las compras a los proveedores, entendierndo el stock disponible, hasta tener el conocimiento de en cual equipo se instalan los repuestos para que las maquinas funcionen de manera optima.
 
  ## Objetivo: 
 
 
-Diseñar e implementar una base de datos relacional que permita a la empresa llevar un control eficiente y detallado de los repuestos que compra a diferentes proveedores. Los cuales luego se instalan en diferentes máquinas para realizar su mantenimiento. Buscamos que la base sea simple de entender, fácil de manejar para sus usuarios, que facilite el acceso a la información, que mejore el control y que finalmente pueda mejoara la toma de decisiones y la eficiencia operacional de la empresa.
+Diseñar e implementar una base de datos relacional que permita a la empresa llevar un control eficiente y detallado de los repuestos que compra a diferentes proveedores. Los cuales luego se instalan en diferentes máquinas para realizar su mantenimiento. Buscamos que la base sea simple de entender, fácil de manejar para sus usuarios, que facilite el acceso a la información, que mejore el control, que finalmente pueda mejoara la toma de decisiones y la eficiencia operacional de la empresa.
 
 
 ## Modelo de Negocios: 
 
 
-**Gestión de pedidos a proveedores:**  Permite tener el control y registro de los pedidos realizados a los proveedores y el detalle de cada uno.Esto permite tener el conocimiento de cuales son los proveedores mas relevante y mas confiables para nuestra empresa.
+**Gestión de pedidos a proveedores:**  Permite tener el control y registro de los pedidos realizados a los proveedores y el detalle de cada uno. Esto permite tener el conocimiento de cuales son los proveedores mas relevante y mas confiables para nuestra empresa.
 
 **Gestión de Repuestos:** Esta base permite conocer el stock de repuestos en algún momento determinado del tiempo. Para este negocio es muy relevante tener respuesdtos siempre disponibles ya que su ausencia afecta la disponibilidad de las maquinas en el trabajo. 
 
@@ -125,7 +125,7 @@ SELECT * FROM Mantenientos_ultimo_mes;
   
 ### Vista Mantenimientos costosos:
 
- Esta lista muestra los mantenimientos mas caros que se han realizado en la empresa.
+Esta Vista muestra los mantenimientos mas caros que se han realizado en la empresa.
   
 Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Maquina; Costo_Total
 
@@ -156,7 +156,7 @@ ORDER BY stock DESC;
 
 Esta vista permite ver los provedores a los cuales les compramos mas repuestos.
 
-La intencion de esta vista es que la administracion pueda visualizar los provedores mas relevantes para la empresa y puredan saber rapidamente cuales son los mas estrategicos para la empresa. Al correr la vista se puede ver que los provedortes a los que se les han comprado mas repuestos son: Komatsu, Liebherr y Bobcat.
+La intencion de esta vista es que la administracion pueda visualizar los provedores mas relevantes para la empresa y puredan saber rapidamente cuales son los mas estrategicos para la empresa. Al correr la vista se puede ver que los provedores a los que se les han comprado mas repuestos son: Komatsu, Liebherr y Bobcat.
 
 Ejemplo de Consulta:
 
@@ -169,7 +169,8 @@ SELECT * FROM Proveedores_Mayor_Volumen;
 
 Permite ver las maquinas en las cuales mas se ha gastado por mantenimiento
 
-Esta vista es relevante porque le permite visualizar a los encargados de maquinaria cuales son las maquinas en las que se ha gastado mas, luego con un poco mas de investigacion se pueden tomar deciciones como vpor ejemplo decidir que ya es tiempo de venderla o evita los equipos de una determinada marca 
+Esta vista es relevante porque le permite a los encargados de maquinaria visualizar cuales son las maquinas en las que se ha gastado mas, lo que puede ayudar 
+ a decidir en decisiones de renovacion o a evitar los equipos de determinadas marcas.   
 
 ```
 SELECT * FROM Costo_de_Mantenimiento_x_Maquina;
