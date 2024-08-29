@@ -101,6 +101,10 @@ INSERT INTO Pedido (ID_Pedido, Fecha_Pedido, Fecha_Recepcion, ID_Proveedor) VALU
 (29, '2024-01-29', '2024-02-02', 29),
 (30, '2024-01-30', '2024-02-03', 30);
 
+INSERT INTO Pedido (ID_Pedido, Fecha_Pedido, Fecha_Recepcion, ID_Proveedor) VALUES
+(31, '2024-06-29', NULL , 29),
+(32, '2024-06-30', NULL , 30);
+
 -- TABLA 4 DETALLEPEDIDO
 INSERT INTO DetallePedido (ID_Pedido, ID_Repuesto, Cantidad) VALUES
 (1, 1, 10),
