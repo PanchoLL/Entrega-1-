@@ -119,7 +119,9 @@ Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Descripcion; Id_Maquina
 
 Ejemplo Consulta:
 
-```SELECT * FROM Mantenientos_ultimo_mes;```
+```
+SELECT * FROM Mantenientos_ultimo_mes;
+```
   
 ### Vista Mantenimientos costosos:
 
@@ -129,7 +131,9 @@ Columnas: ID_ Mantenimieno; Fecha_Mantenimiento; Maquina; Costo_Total
 
 Ejemplo Consulta:
 
-```SELECT * FROM mantenimientos_Costosos;```
+```
+SELECT * FROM mantenimientos_Costosos;
+```
 
   
 ### Vista Stock_Repuestos:
@@ -142,8 +146,9 @@ Columnas: Id_ Repuesto; Nombre; Stock
 
 Ejemplo Consulta:
 
-```SELECT * FROM Stock_Repuestos
-   ORDER BY stock DESC;
+```
+SELECT * FROM Stock_Repuestos
+ORDER BY stock DESC;
 ```
 
 
