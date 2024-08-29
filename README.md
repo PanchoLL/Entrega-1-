@@ -170,6 +170,16 @@ Esta vista es relevante porque le permite visualizar a los encargados de maquina
 SELECT * FROM Costo_de_Mantenimiento_x_Maquina;
 ```
 
+### Vista Pedidos_Pendientes
+
+Permite ver los pedidos que etan pendientes de recepcion
+
+Esta vista conocer los pedidos que estan pendientes de entrega lo cual ayuda a hacer seguiomiento y gestionar con los provvesdores en caso que sea necesario.
+
+```
+SELECT * FROM Pedidos_Pendientes;
+```
+
 ## Documentacion de Funciones
 
 ### Funcion Dias de Pedido: 
@@ -293,16 +303,15 @@ Envia un mensaje en caso de que la Fecha de recepcion sea anterior a la fecha de
 En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterior a la fecha de pedido' en caso que las fechas sean mal ingresadas.
 
 
-
 ## Back Up Schemas & Data 
 
 Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
 
 ## Pasos para Levantar el Modelo:
 
-En primer lugar se debe correr la estructura de la base disponible en **Database_Structure**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo lo0s diferentes objetos de la base de datos 
+En primer lugar se debe correr la estructura de la base disponible en **Database_Structure**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo los diferentes objetos de la base de datos, los cuales se encuentran en la carpeta **DatabaseObjects**
 
 ## Puntos a Mejorar del Modelo:
 
 
-
+Como complemento a este texto se ha subido una presentacion cargada en PDF.
