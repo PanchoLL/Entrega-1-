@@ -325,7 +325,6 @@ Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi
 
 En primer lugar se debe correr la estructura de la base disponible en **Database_Structure**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo los diferentes objetos de la base de datos, los cuales se encuentran en la carpeta **DatabaseObjects**
 
-## Puntos a Mejorar del Modelo:
 
-
+## Adicional 
 Como complemento a este texto se ha subido una presentacion cargada en PDF.
