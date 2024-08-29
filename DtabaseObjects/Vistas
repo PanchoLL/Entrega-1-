@@ -32,7 +32,6 @@ SELECT * FROM mantenimientos_Costosos;
 
 -- Vista 3: Visualizacion del stock de repuetos disponibles 
 
-DROP VIEW IF EXISTS Stock_Repuestos
 CREATE VIEW  Stock_Repuestos AS
 SELECT Id_Repuesto, Nombre, Stock 
 FROM Repuesto;
