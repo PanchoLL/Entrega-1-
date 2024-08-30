@@ -138,7 +138,7 @@ SELECT * FROM mantenimientos_Costosos;
   
 ### Vista Stock_Repuestos:
 
-Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto, nombre y Stock. 
+Esta vista muestra el stock disponible para cada repuesto. La tabla se muestra por Id_Repuesto, nombre y Stock. Vista muy relevante para conocer que repuestos presentan un bajo nivel en bodega.
 
 Stock_Repuestos resulta ser un KPI muy relevante 
  
@@ -192,7 +192,7 @@ SELECT * FROM Pedidos_Pendientes;
 
 Esta funcion entrega la diferencia, en dias, entre la Fecha de Recepcion y la Fecha de Pedido. Con la finalidad se poder tener control sobre cuanto se estan demorando en llegar los pedidos realizados.
 
-De esta funcion podemos obtener un KPI relevante el cual nos indica que pedidos son mas confiebles 
+De esta funcion podemos obtener una idea de cuanto se estan demosrando en ralidad los pedidos en llegar. 
 
 Retorno: Dias desde que solicito un pedido hasta que fue entregado 
 
@@ -210,7 +210,7 @@ FROM
 
 ### Funcion Valor por repuesto:
 
-En esta funcion puedo revisar cuanto dinero hay en cada tipo de repuesto. Indica el nombre del repuesto el precio al cual se compro, la cantidad de stock y el Valor del stock en bodega.
+En esta funcion puedo revisar cuanto dinero hay en cada tipo de repuesto. Indica el nombre del repuesto el precio al cual se compro, la cantidad de stock y el Valor del stock en bodega. Nos permite conocer un desgloce rapido de la bodega.
   
 Retorno: Valor total de cada tipo de repuesto.
 
@@ -255,7 +255,7 @@ CALL SP_Valor_Total_Stock()
 
 ### Procedimiento Mantenimientos por Maquina 
 
-Entrega los mantenimientos que se le han realizado a cada maquina y contiene informacion de cada uno de ellos.
+Entrega los mantenimientos que se le han realizado a cada maquina y contiene informacion de cada uno de ellos. Este es es uno de los indicadores mas relevantes porque nos muestra el historial de mantenimiento de las maquinas que tenemos.
 
 Retorno: Entrega informacion varia acerca de los mantenimientos que se le ahan realizado a una maquina en particular.
 
@@ -267,7 +267,7 @@ CALL Mantenimientos_Por_Maquina(4);
 
 ### Procedimiento Repuestos con Poco Stock
 
-Este procedimiento permite revisar rapidamente que repuestos tienen stock bajo un numero determinado
+Este procedimiento permite revisar rapidamente que repuestos tienen stock bajo un numero determinado. Permite visualizar rapidamente los repuestos con stock critico.
 
 Retorno: Muestra tabla con todos los respuestos que estan bajo un monto selecionado. Por ejemplo, podemos ver todos los repuestos que tienen stock menor que 30.
 
@@ -319,11 +319,13 @@ En este caso se genera el mensaje: 'La fecha de reposición no puede ser anterio
 
 ## Back Up Schemas & Data 
 
-Se genero un bacup siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base pentrega2 que es donde esta nuestro modelo
+Se genero un back up siguiendo la siguente ruta Administration -> Data Export. Ahi se respaldo la base **pentrega2** en un self-Conteined File con la estructura del modelo, los datos y todos los objetos disponibles. Se cargo el archivo .SQL generado a Git Hub (Back Up - Dump20240829.sql). este documento se puede descargar y posteriormente importar a Workbench.
 
 ## Pasos para Levantar el Modelo:
 
 En primer lugar se debe correr la estructura de la base disponible en **Database_Structure**. Luego se debe popular la base, esta informacion se encuentra en el archivo **population**. Luego se deben ir corriendo los diferentes objetos de la base de datos, los cuales se encuentran en la carpeta **DatabaseObjects**
+
+Realizamos todo el trabajo en MySql Workbench.
 
 
 ## Adicional 
