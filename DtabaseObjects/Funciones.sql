@@ -1,6 +1,5 @@
 -- FUNCIONES
 
-USE Pentrega2
 
 -- FUNCION 1: RESTA Fecha_Pedido MENOS Fecha_Reepcion 
 
