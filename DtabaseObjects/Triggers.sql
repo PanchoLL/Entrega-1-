@@ -1,6 +1,5 @@
 -- TRIGGERS
 
-USE Pentrega2
 
 -- Trigger 1: Actualiza el stock de un repuesto cuando se inserta un nuevo detalle de mantenimiento 
 
