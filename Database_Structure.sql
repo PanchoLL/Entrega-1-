@@ -39,7 +39,7 @@ CREATE TABLE Pedido (
     ID_Proveedor INT
     );
 
--- Tabla Detallepedido
+-- Tabla DetallePedido
 CREATE TABLE DetallePedido (
     ID_Detalle INT PRIMARY KEY AUTO_INCREMENT,
     ID_Pedido INT,
@@ -75,18 +75,18 @@ CREATE TABLE DetalleMantenimiento (
 -- Definicion clave forranea:
 
 -- Pedido / Proveedor
-ALTER TABLE pedido
-   ADD CONSTRAINT fk_pedido_proveedor
+ALTER TABLE Pedido
+   ADD CONSTRAINT fk_Pedido_Proveedor
    FOREIGN KEY (ID_Proveedor) REFERENCES Proveedor (ID_Proveedor);
   
-  -- Detallepedido / pedido
-ALTER TABLE detallepedido
-    ADD CONSTRAINT fk_detallepedido_pedido
+  -- Detallepedido / Pedido
+ALTER TABLE DetallePedido
+    ADD CONSTRAINT fk_Detallepedido_Pedido
 	FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido);
   
-    -- Detallepedido / repuesto
-ALTER TABLE detallepedido
-     ADD CONSTRAINT fk_detallepedido_repuesto
+    -- Detallepedido / Repuesto
+ALTER TABLE DetallePedido
+     ADD CONSTRAINT fk_Detallepedido_Repuesto
      FOREIGN KEY (ID_Repuesto) REFERENCES Repuesto(ID_Repuesto);
      
      -- RepuestoMaquina / Repuesto
