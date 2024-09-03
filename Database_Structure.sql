@@ -5,7 +5,7 @@
 CREATE DATABASE IF NOT EXISTS RepuestosMaquinaria;
 USE RepuestosMaquinaria;
 
--- Tabla proveedor
+-- Tabla Proveedor
 CREATE TABLE Proveedor (
     ID_Proveedor INT PRIMARY KEY AUTO_INCREMENT,
     Nombre VARCHAR(100),
@@ -14,7 +14,7 @@ CREATE TABLE Proveedor (
     Email VARCHAR(100)
 );
 
--- Tabla repuesto
+-- Tabla Repuesto
 CREATE TABLE Repuesto (
     ID_Repuesto INT PRIMARY KEY AUTO_INCREMENT,
     Nombre VARCHAR(100),
