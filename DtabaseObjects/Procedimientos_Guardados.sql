@@ -1,7 +1,5 @@
 -- PROCEDIMIENTOS ALMACENADOS
 
-USE Pentrega2
-
 -- Procedimiento 1: Buscamos el valor total que tenemos en repuestos
 
 DELIMITER //
